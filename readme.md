@@ -38,11 +38,11 @@ This is like my second split keyboard. :)
 1. Install [QMK](https://docs.qmk.fm/#/newbs) and git
 2. do a `git clone git@github.com:qmk/qmk_firmware.git ~/qmk_firmware`
 3. then do a `git clone git@github.com:74k1/lotus58_firmware.git ~/qmk_firmware/keyboards/tweetydabird/lotus58/keymaps/74k1`
-4. now you should be able to do a simple: `qmk compile -kb tweetydabird/lotus58/promicro -km 74k1`
-5. then flash it with the qmk command: `qmk flash -kb tweetydabird/lotus58/promicro -km 74k1` or the qmk toolbox
+4. now you should be able to do a simple: `qmk compile -kb tweetydabird/lotus58/promicro -km 74k1 -e CONVERT_TO=rp2040_ce`
+5. then flash it with the qmk command: `qmk flash -kb tweetydabird/lotus58/promicro -km 74k1 -e CONVERT_TO=rp2040_ce` or the qmk toolbox
 
 ## Credits
 
 | Name | Remarks |
 |------|---------|
-| [TweetyDaBird](https://github.com/TweetyDaBird) | For making the keyboard :P |
+| [TweetyDaBird](https://github.com/TweetyDaBird) | For making the keyboard (and helping me out a lot with the firmware in the beginning) :P |
