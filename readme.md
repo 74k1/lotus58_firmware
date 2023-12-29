@@ -38,8 +38,8 @@ This is like my second split keyboard. :)
 1. Install [QMK](https://docs.qmk.fm/#/newbs) and git
 2. do a `git clone git@github.com:qmk/qmk_firmware.git ~/qmk_firmware`
 3. then do a `git clone git@github.com:74k1/lotus58_firmware.git ~/qmk_firmware/keyboards/tweetydabird/lotus58/keymaps/74k1`
-4. now you should be able to do a simple: `qmk compile -kb tweetydabird/lotus58 -km 74k1`
-5. then flash it with the qmk command: `qmk flash -kb tweetydabird/lotus58 -km 74k1` or the qmk toolbox
+4. now you should be able to do a simple: `qmk compile -kb tweetydabird/lotus58/promicro -km 74k1`
+5. then flash it with the qmk command: `qmk flash -kb tweetydabird/lotus58/promicro -km 74k1` or the qmk toolbox
 
 ## Credits
 
