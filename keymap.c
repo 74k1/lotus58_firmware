@@ -47,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // | LCTL  | Y      | X      | C      | V      | B      | N/A    |       | N/A    | N      | M      | ,      | .      | -      | ENTER  |
         KC_LCTL,    CH_Y,    CH_X,    CH_C,    CH_V,    CH_B, XXXXXXX,         XXXXXXX,    CH_N,    CH_M, CH_COMM,  CH_DOT, CH_MINS,  KC_ENT,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-                               //| N/A    | MOD    | LAYER1 | SPACE  |       | ENTER  | LAYER2 | ALT    | N/A    |
-                                   XXXXXXX, KC_LGUI,   MO(1),  KC_SPC,          KC_ENT,   MO(2), KC_LALT, XXXXXXX
+                               //| MOD    | LALT   | LAYER1 | SPACE  |       | ENTER  | LAYER2 | RALT   | N/A    |
+                                   KC_LGUI, KC_LALT,   MO(1),  KC_SPC,          KC_ENT,   MO(2), KC_RALT, XXXXXXX
                                //'--------+--------+--------+--------'       '--------+--------+--------+--------'
     ),
     [1] = LAYOUT( // FKEYS, ARROWS, MODS
