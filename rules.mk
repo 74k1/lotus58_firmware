@@ -5,7 +5,7 @@ COMBO_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 
 OLED_ENABLE = yes
-OLED_DRIVER = SSD1306
+OLED_DRIVER = ssd1306
 ifeq ($(OLED_ENABLE),yes)
 	SRC += ./oled.c
 endif
@@ -14,7 +14,7 @@ endif
 #LTO_ENABLE = yes
 
 RGBLIGHT_ENABLE = no
-RGB_MATRIX_ENABLE = yes
+#RGB_MATRIX_ENABLE = yes
 #ifeq ($(RGB_MATRIX_ENABLE),yes)
 #	SRC += ./rgb.c
 #endif
