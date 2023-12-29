@@ -3,6 +3,14 @@
 > The Lotus58 keyboard is a split keyboard with 4x6 column staggered keys and 5 thumb keys, based on Lily58.
 > [TweetyDaBird](https://github.com/TweetyDaBird/Lotus-Keyboard)
 
+## ToDo's
+
+- Rethink my layers
+- add QMK keys
+- add Mac switch
+- RGB
+- take pic
+
 ## Intro
 
 // add spicy image
