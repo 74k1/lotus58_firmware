@@ -37,7 +37,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // OLED
 #define OLED_DISABLE_TIMEOUT
 #define OLED_BRIGHTNESS 128
-#define OLED_FONT_H "keyboards/crkbd/keymaps/74k1/glcdfont.c"
+#define OLED_FONT_H "keyboards/tweetydabird/lotus58/keymaps/74k1/glcdfont.c"
+
+// RGB
+#define RGB_MATRIX_LED_COUNT 58
+//#define WS2812_DI_PIN D7
 
 #ifdef RGB_MATRIX_ENABLE
     #define RGB_MATRIX_KEYPRESSES // reacts to keypresses
@@ -57,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     // RGB Matrix Animation modes. Explicitly enabled
     // For full list of effects, see:
     // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
-    #define ENABLE_RGB_MATRIX_SOLID_COLOR
+    #define ENABLE_RGB_MATRIX_SOLID_COLOR 1
     // #define ENABLE_RGB_MATRIX_ALPHAS_MODS
     // #define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
     // #define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT

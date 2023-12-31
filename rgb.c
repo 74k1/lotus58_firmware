@@ -1,15 +1,4 @@
-// RGB shenanigans
 #pragma once
-
-#ifdef RGBLIGHT_ENABLE
-extern rgblight_config_t rgblight_config;
-rgblight_config_t RGB_current_config;
-#endif
-
-#ifdef RGB_MATRIX_ENABLE
-extern rgb_config_t rgb_matrix_config;
-rgb_config_t RGB_current_config;
-#endif
 
 void save_rgb_config(void) {
     #ifdef RGBLIGHT_ENABLE
