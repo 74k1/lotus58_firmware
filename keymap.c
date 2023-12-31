@@ -65,8 +65,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // | LCTL  |        |        | LEFT   | DOWN   | RIGHT  | N/A    |       | N/A    | HOME   | PGDOWN | PGUP   | END    |        |        |
         _______, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,         XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-                               //| N/A    | MOD    | LAYER1 | SPACE  |       | ENTER  | LAYER3 | ALT    | N/A    |
-                                   XXXXXXX, KC_LGUI, _______,  KC_SPC,          KC_ENT,   MO(3), KC_LALT, XXXXXXX
+                               //| MOD    | LALT   | LAYER1 | SPACE  |       | ENTER  | LAYER3 | RALT   | N/A    |
+                                   KC_LGUI, KC_LALT, _______,  KC_SPC,          KC_ENT,   MO(3), KC_RALT, XXXXXXX
                                //'--------+--------+--------+--------'       '--------+--------+--------+--------'
     ),
     [2] = LAYOUT( // SPECIAL
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_ESC,    CH_1,    CH_2,    CH_3,    CH_4,    CH_5, XXXXXXX,         XXXXXXX,    CH_6,    CH_7,    CH_8,    CH_9,    CH_0, KC_BSPC,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
     // | ~     | ^      | @      | #      | °      | $      |        |       |        | `      | |      | '      | ?      | !      |        |
-        CH_TILD, CH_CIRC,   CH_AT, CH_HASH,  CH_DEG,  CH_DLR,                            CH_GRV, CH_PIPE, CH_QUOT, CH_QUES, CH_EXLM, _______,
+        CH_TILD, CH_CIRC,   CH_AT, CH_HASH,  CH_DEG,  CH_DLR,                            CH_GRV, CH_PIPE, CH_QUOT, CH_QUES, CH_EXLM, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
     // | LSFT  | <      | [      | {      | (      | \      |        |       |        | /      | )      | }      | ]      | >      | RSFT   |
         _______, CH_LABK, CH_LBRC, CH_LCBR, CH_LPRN, CH_BSLS,                           CH_SLSH, CH_RPRN, CH_RCBR, CH_RBRC, CH_RABK, _______,
@@ -83,53 +83,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // | LCTL  |        |        | MUTE   | VOL DN | VOL UP | N/A    |       | N/A    | PRV    | PLY    | NXT    |        |        | ENTER  |
         _______, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX,         XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, _______,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-                               //| N/A    | MOD    | LAYER3 | SPACE  |       | ENTER  | LAYER2 | ALT    | N/A    |
-                                   XXXXXXX, KC_LGUI,   MO(3),  KC_SPC,          KC_ENT, _______, KC_LALT, XXXXXXX
+                               //| MOD    | LALT   | LAYER3 | SPACE  |       | ENTER  | LAYER2 | RALT   | N/A    |
+                                   KC_LGUI, KC_LALT,   MO(3),  KC_SPC,          KC_ENT, _______, KC_RALT, XXXXXXX
                                //'--------+--------+--------+--------'       '--------+--------+--------+--------'
     ),
-    [3] = LAYOUT( // F KEYS, QMK RGB
+    [3] = LAYOUT( // QMK
     // .-------------------------------------------------------------.       .--------------------------------------------------------------.
-    // | ESC   | 1      | 2      | 3      | 4      | 5      |        |       |        | 6      | 7      | 8      | 9      | 0      | <-     |
-         KC_ESC,    CH_1,    CH_2,    CH_3,    CH_4,    CH_5, XXXXXXX,         XXXXXXX,    CH_6,    CH_7,    CH_8,    CH_9,    CH_0, KC_BSPC,
+    // |       |        |        |        |        |        |        |       |        |        |        |        |        |        |        |
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | TAB   | Q      | W      | E      | R      | T      |        |       |        | Z      | U      | I      | O      | P      |        |
-         KC_TAB,    CH_Q,    CH_W,    CH_E,    CH_R,    CH_T,                              CH_Y,    CH_U,    CH_I,    CH_O,    CH_P, XXXXXXX,
+    // |       |        |        |        |        |        |        |       |        |        |        |        |        |        |        |
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | CAPS  | A      | S      | D      | F      | G      |        |       |        | H      | J      | K      | L      | /      | RSFT   |
-        KC_CAPS,    CH_A,    CH_S,    CH_D,    CH_F,    CH_G,                              CH_H,    CH_J,    CH_K,    CH_L, CH_SLSH, KC_RSFT,
+    // | BOOT  |        |        |        |        |        |        |       |        | HUE +  | SAT +  | BRI +  | EFF +  | TG RGB |        |
+        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-    // | LCTL  | Y      | X      | C      | V      | B      | N/A    |       | N/A    | N      | M      | ,      | .      | -      | ENTER  |
-        KC_LCTL,    CH_Y,    CH_X,    CH_C,    CH_V,    CH_B, XXXXXXX,         XXXXXXX,    CH_N,    CH_M, CH_COMM,  CH_DOT, CH_MINS,  KC_ENT,
+    // |       |        |        |        |        |        |        |       | LAYER4 | HUE -  | SAT -  | BRI -  | EFF -  | MO RGB |        |
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           TG(4), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-                               //| N/A    | MOD    | LAYER1 | SPACE  |       | ENTER  | LAYER2 | ALT    | N/A    |
-                                   XXXXXXX, KC_LGUI,   MO(1),  KC_SPC,          KC_ENT,   MO(2), KC_LALT, XXXXXXX
+                               //|        |        | LAYER3 |        |       |        | LAYER3 |        |        |
+                                   XXXXXXX, XXXXXXX, _______, XXXXXXX,         XXXXXXX, _______, XXXXXXX, XXXXXXX
                                //'--------+--------+--------+--------'       '--------+--------+--------+--------'
     ),
     [4] = LAYOUT( // MOUSE
     // .-------------------------------------------------------------.       .--------------------------------------------------------------.
-    // | ESC   | 1      | 2      | 3      | 4      | 5      |        |       |        | 6      | 7      | 8      | 9      | 0      | <-     |
-         KC_ESC,    CH_1,    CH_2,    CH_3,    CH_4,    CH_5, XXXXXXX,         XXXXXXX,    CH_6,    CH_7,    CH_8,    CH_9,    CH_0, KC_BSPC,
+    // |       |        |        |        |        |        |        |       |        |        |        |        |        |        |        |
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | TAB   | Q      | W      | E      | R      | T      |        |       |        | Z      | U      | I      | O      | P      |        |
-         KC_TAB,    CH_Q,    CH_W,    CH_E,    CH_R,    CH_T,                              CH_Y,    CH_U,    CH_I,    CH_O,    CH_P, XXXXXXX,
+    // |       |        | MUP    |        |        |        |        |       |        |        |        | MOUSE3 | MWH UP |        |        |
+        XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX,                           XXXXXXX, XXXXXXX, KC_BTN3, KC_WH_U, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | CAPS  | A      | S      | D      | F      | G      |        |       |        | H      | J      | K      | L      | /      | RSFT   |
-        KC_CAPS,    CH_A,    CH_S,    CH_D,    CH_F,    CH_G,                              CH_H,    CH_J,    CH_K,    CH_L, CH_SLSH, KC_RSFT,
+    // |       | MLEFT  | MDOWN  | MRIGHT |        |        |        |       |        |        | MOUSE1 | MOUSE2 | MWH DN |        |        |
+        XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, XXXXXXX,                           XXXXXXX, KC_BTN1, KC_BTN2, KC_WH_D, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-    // | LCTL  | Y      | X      | C      | V      | B      | N/A    |       | N/A    | N      | M      | ,      | .      | -      | ENTER  |
-        KC_LCTL,    CH_Y,    CH_X,    CH_C,    CH_V,    CH_B, XXXXXXX,         XXXXXXX,    CH_N,    CH_M, CH_COMM,  CH_DOT, CH_MINS,  KC_ENT,
+    // |       |        |        |        |        |        |        |       | LAYER4 |        |        |        |        |        |        |
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
-                               //| N/A    | MOD    | LAYER1 | SPACE  |       | ENTER  | LAYER2 | ALT    | N/A    |
-                                   XXXXXXX, KC_LGUI,   MO(1),  KC_SPC,          KC_ENT,   MO(2), KC_LALT, XXXXXXX
+                               //|        |        |        |        |       |        |        |        |        |
+                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
                                //'--------+--------+--------+--------'       '--------+--------+--------+--------'
     )
 };
-
-// #if defined(ENCODER_MAP_ENABLE)
-// const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-//     [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-//     [1] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-//     [2] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-//     [3] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
-// };
-// #endif

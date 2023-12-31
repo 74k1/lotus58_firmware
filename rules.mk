@@ -13,8 +13,9 @@ endif
 #WPM_ENABLE = yes
 #LTO_ENABLE = yes
 
-RGBLIGHT_ENABLE = no
+#RGBLIGHT_ENABLE = yes
 #RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = ws2812
 #ifeq ($(RGB_MATRIX_ENABLE),yes)
 #	SRC += ./rgb.c
 #endif
