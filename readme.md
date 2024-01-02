@@ -54,3 +54,4 @@ This is like my second split keyboard. :)
 | Name | Remarks |
 |------|---------|
 | [TweetyDaBird](https://github.com/TweetyDaBird) | For making the keyboard (and helping me out a lot with the firmware in the beginning) :P |
+| [Tweety's Wild Thinking Discord](https://discord.gg/G6QzcJQUnm) | Also being a great help to me. |
