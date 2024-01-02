@@ -5,11 +5,11 @@
 
 ## ToDo's
 
-- Rethink my layers
-- add QMK keys
-- add Mac switch
-- RGB
-- take pic
+- [ ] Rethink my layers
+- [x] add QMK keys
+- [ ] add Mac switch
+- [x] RGB
+- [ ] take pic
 
 ## Intro
 
