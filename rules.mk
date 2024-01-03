@@ -4,13 +4,15 @@ FORCE_NKRO = yes
 COMBO_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 
+SPLIT_KEYBOARD = yes
+
 OLED_ENABLE = yes
 OLED_DRIVER = ssd1306
 ifeq ($(OLED_ENABLE),yes)
 	SRC += ./oled.c
 endif
 
-#WPM_ENABLE = yes
+WPM_ENABLE = yes
 #LTO_ENABLE = yes
 
 RGBLIGHT_ENABLE = no
@@ -19,6 +21,7 @@ RGB_MATRIX_DRIVER = ws2812
 ifeq ($(RGB_MATRIX_ENABLE),yes)
 	SRC += ./rgb.c
 endif
+SLEEP_LED_ENABLE = no
 
 ENCODER_MAP_ENABLE = no
 AUTO_SHIFT_ENABLE = no
