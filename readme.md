@@ -1,7 +1,9 @@
-# Lotus ハス, the Lotus58 Keymap
+# Kikō 機巧, a Lotus58 Keymap
 
 > The Lotus58 keyboard is a split keyboard with 4x6 column staggered keys and 5 thumb keys, based on Lily58.
 > [TweetyDaBird](https://github.com/TweetyDaBird/Lotus-Keyboard)
+
+<img alt="Static Badge" src="https://qmk.fm/assets/images/badge-small-dark.png" style="width:200px;">
 
 ## ToDo's
 
