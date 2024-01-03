@@ -7,11 +7,12 @@
 
 ## ToDo's
 
-- [ ] Rethink my layers
+- [x] Rethink my layers
 - [x] add QMK keys
 - [ ] add Mac switch
-- [x] RGB
+- [x] RGB (thanks to [RagingCactus](https://github.com/RagingCactus/qmk_firmware/))
 - [ ] take pic
+- [ ] update readme.md
 
 ## Intro
 
@@ -32,6 +33,8 @@ This is like my second split keyboard. :)
 
 ## Specs
 
+I ordered main Keyboard Parts from [lectronz](https://lectronz.com/stores/tweetys-wild-thinking) directly with a solder service. :^)
+
 | Component | Quantity |
 |-----------|----------|
 | Pro Micro RP2040 Clone | 2 |
@@ -41,19 +44,29 @@ This is like my second split keyboard. :)
 | Lotus 58 Glow v1.x.x TRRS TH (kit) | 2 |
 | Lotus 58 Glow Case TRRS, OLED Kit (black) | 1 |
 | [Akko Penguin Switches](https://en.akkogear.com/product/akko-v3-pro-penguin-switch-silent/) | 58 |
-| Blank XDA Keycaps | 58 |
+| [ePBT x GOK Kuro/Shiro R3](https://kbdfans.com/products/kuro-shiro-r3) | Full-Set |
 
 ## How do I flash this?
 
 1. Install [QMK](https://docs.qmk.fm/#/newbs) and git
-2. do a `git clone git@github.com:qmk/qmk_firmware.git ~/qmk_firmware`
-3. then do a `git clone git@github.com:74k1/lotus58_firmware.git ~/qmk_firmware/keyboards/tweetydabird/lotus58/keymaps/74k1`
-4. now you should be able to do a simple: `qmk compile -kb tweetydabird/lotus58/promicro -km 74k1 -e CONVERT_TO=rp2040_ce`
-5. then flash it with the qmk command: `qmk flash -kb tweetydabird/lotus58/promicro -km 74k1 -e CONVERT_TO=rp2040_ce` or the qmk toolbox
+2. do a
+
+   `git clone git@github.com:qmk/qmk_firmware.git ~/qmk_firmware`
+4. then do a
+
+   `git clone git@github.com:74k1/lotus58_firmware.git ~/qmk_firmware/keyboards/tweetydabird/lotus58/keymaps/74k1`
+6. now you should be able to compile it with a simple:
+
+   `qmk compile -kb tweetydabird/lotus58/promicro -km 74k1 -e CONVERT_TO=rp2040_ce`
+8. then flash your boards with the qmk command: (to put your board into boot-mode, press the top soldered button twice 😉)
+
+   `qmk flash -kb tweetydabird/lotus58/promicro -km 74k1 -e CONVERT_TO=rp2040_ce` 
 
 ## Credits
 
 | Name | Remarks |
 |------|---------|
-| [TweetyDaBird](https://github.com/TweetyDaBird) | For making the keyboard (and helping me out a lot with the firmware in the beginning) :P |
-| [Tweety's Wild Thinking Discord](https://discord.gg/G6QzcJQUnm) | Also being a great help to me. |
+| [TweetyDaBird](https://github.com/TweetyDaBird) | For making the keyboard (and helping me out a lot with the firmware in the beginning) |
+| [Tweety's Wild Thinking Discord](https://discord.gg/G6QzcJQUnm) | Also being a great help to me. Especially [RagingCactus](https://github.com/RagingCactus/qmk_firmware/) for the RGB. |
+| [joric](https://github.com/joric/qle) | For the glcdfont editor. Very cool. |
+| [laosteven](https://github.com/laosteven/fluffy-octo-eureka)https://github.com/laosteven/fluffy-octo-eureka | For the readme inspiration. |
