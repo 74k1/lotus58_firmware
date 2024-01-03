@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Select hand configuration */
 
 #define MASTER_LEFT
+#define USE_SERIAL
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
@@ -39,18 +40,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_BRIGHTNESS 128
 #define OLED_FONT_H "keyboards/tweetydabird/lotus58/keymaps/74k1/glcdfont.c"
 
+// Dual Display Mods
+#define SERIAL_USE_MULTI_TRANSACTION
+#define SPLIT_MODS_ENABLE
+#define SPLIT_TRANSPORT_MIRROR
+#define SPLIT_LAYER_STATE_ENABLE
+
 // RGB
 #define RGB_MATRIX_LED_COUNT 58
 //#define WS2812_DI_PIN D7
 
 #ifdef RGB_MATRIX_ENABLE
+    #define RGB_MATRIX_SPLIT {29, 29}
+    #define DRIVER_LED_TOTAL 58
     #define RGB_MATRIX_KEYPRESSES // reacts to keypresses
     // #define RGB_MATRIX_KEYRELEASES // reacts to keyreleases (instead of keypresses)
     #define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
     #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
     // #define RGB_MATRIX_LED_PROCESS_LIMIT (RGB_MATRIX_LED_COUNT + 4) / 5 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
     // #define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
-    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
+    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 128 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
     #define RGB_MATRIX_HUE_STEP 8
     #define RGB_MATRIX_SAT_STEP 8
     #define RGB_MATRIX_VAL_STEP 8

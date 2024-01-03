@@ -59,14 +59,14 @@ void oled_render_layer_state_main(void) {
     }
 }
 
-static void render_default_logo(void) {
-    static const char PROGMEM qmk_default_logo[] = {
-        128, 129, 130, 131, 132,
-        160, 161, 162, 163, 164,
-        192, 193, 194, 195, 196, 0
-    };
-    oled_write_P(qmk_default_logo, false);
-}
+//static void render_default_logo(void) {
+//    static const char PROGMEM qmk_default_logo[] = {
+//        128, 129, 130, 131, 132,
+//        160, 161, 162, 163, 164,
+//        192, 193, 194, 195, 196, 0
+//    };
+//    oled_write_P(qmk_default_logo, false);
+//}
 
 static void render_logo(void) {
     static const char PROGMEM qmk_default_logo[] = {
@@ -86,77 +86,77 @@ static void render_logo(void) {
 //    oled_write_P(qmk_logo, false);
 //}
 
-static void render_first_logo(void) {
-    static const char PROGMEM qmk_first_logo[] = {
-        32, 138, 139, 140, 141,
-        32, 170, 171, 172, 173,
-        32, 202, 203, 204, 205, 0
-    };
-    oled_write_P(qmk_first_logo, false);
-}
+//static void render_first_logo(void) {
+//    static const char PROGMEM qmk_first_logo[] = {
+//        32, 138, 139, 140, 141,
+//        32, 170, 171, 172, 173,
+//        32, 202, 203, 204, 205, 0
+//    };
+//    oled_write_P(qmk_first_logo, false);
+//}
 
-static void render_second_logo(void) {
-    static const char PROGMEM qmk_second_logo[] = {
-        32, 143, 144, 145, 146,
-        32, 175, 176, 177, 178,
-        32, 207, 208, 209, 210, 0
-    };
-    oled_write_P(qmk_second_logo, false);
-}
+//static void render_second_logo(void) {
+//    static const char PROGMEM qmk_second_logo[] = {
+//        32, 143, 144, 145, 146,
+//        32, 175, 176, 177, 178,
+//        32, 207, 208, 209, 210, 0
+//    };
+//    oled_write_P(qmk_second_logo, false);
+//}
 
-static void render_third_logo(void) {
-    static const char PROGMEM qmk_third_logo[] = {
-        32, 148, 149, 150, 151,
-        32, 180, 181, 182, 183,
-        32, 212, 213, 214, 215, 0
-    };
-    oled_write_P(qmk_third_logo, false);
-}
+//static void render_third_logo(void) {
+//    static const char PROGMEM qmk_third_logo[] = {
+//        32, 148, 149, 150, 151,
+//        32, 180, 181, 182, 183,
+//        32, 212, 213, 214, 215, 0
+//    };
+//    oled_write_P(qmk_third_logo, false);
+//}
 
-static void render_fourth_logo(void) {
-    static const char PROGMEM qmk_fourth_logo[] = {
-        32, 153, 154, 155, 156,
-        32, 182, 183, 187, 188,
-        32, 217, 218, 219, 220, 0
-    };
-    oled_write_P(qmk_fourth_logo, false);
-}
+//static void render_fourth_logo(void) {
+//    static const char PROGMEM qmk_fourth_logo[] = {
+//        32, 153, 154, 155, 156,
+//        32, 182, 183, 187, 188,
+//        32, 217, 218, 219, 220, 0
+//    };
+//    oled_write_P(qmk_fourth_logo, false);
+//}
 
-void oled_render_layer_state(void) {
-    switch (get_highest_layer(layer_state)) {
-        case 0:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_default_logo();
-            break;
-        case 1:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_first_logo();
-            break;
-        case 2:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_second_logo();
-            break;
-        case 3:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_third_logo();
-            break;
-        case 4:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_fourth_logo();
-            break;
-        case 5:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_third_logo();
-            break;
-        case 6:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            render_fourth_logo();
-            break;
-        default:
-            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
-            oled_write_P(PSTR("  ?  \n\n"), false);
-    }
-}
+//void oled_render_layer_state(void) {
+//    switch (get_highest_layer(layer_state)) {
+//        case 0:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_default_logo();
+//            break;
+//        case 1:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_first_logo();
+//            break;
+//        case 2:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_second_logo();
+//            break;
+//        case 3:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_third_logo();
+//            break;
+//        case 4:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_fourth_logo();
+//            break;
+//        case 5:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_third_logo();
+//            break;
+//        case 6:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            render_fourth_logo();
+//            break;
+//        default:
+//            oled_write_P(PSTR("\n\n\n\n\n\n"), false);
+//            oled_write_P(PSTR("  ?  \n\n"), false);
+//    }
+//}
 
 //static void print_status_narrow(void) {
 //    // Create OLED content
@@ -192,8 +192,8 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR("\n\n\n\n\n"), false);
         // oled_write_P(PSTR("-----"), false);
-        //oled_render_layer_state_main();
-        oled_render_layer_state();
+        oled_render_layer_state_main();
+        //oled_render_layer_state();
         // oled_write(get_u8_str(get_current_wpm(), '0'), false);
         // oled_write_P(PSTR("-----"), false);
         oled_render_led_state();
