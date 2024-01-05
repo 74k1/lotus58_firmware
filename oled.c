@@ -41,10 +41,10 @@ static long int oled_timeout = 600000; // 10 minutes
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (is_keyboard_master()) { // main
-        return OLED_ROTATION_270;
+        return OLED_ROTATION_180;
     } else {
         //return rotation;
-        return OLED_ROTATION_180;
+        return OLED_ROTATION_270;
     }
 }
 
@@ -202,20 +202,17 @@ static void render_anim(void) {
 
 bool oled_task_user(void) {
     if (is_keyboard_master()) {
-        // oled_write_P(PSTR("\n\n\n\n\n"), false);
-        // oled_write_P(PSTR("-----"), false);
+        render_anim();
+        // render_default_logo();
+        // oled_write_P(PSTR("\nLOTUS"), false);
+        //render_logo();
+    } else {
         oled_write_P(PSTR("\nLAYR:\n\n"), false);
         oled_render_layer_state_main();
         //oled_render_layer_state();
         // oled_write(get_u8_str(get_current_wpm(), '0'), false);
         // oled_write_P(PSTR("-----"), false);
         oled_render_led_state();
-    } else {
-        // oled_write_P(PSTR("\n\n\n\n\n"), false);
-        // render_default_logo();
-        // oled_write_P(PSTR("\nLOTUS"), false);
-        //render_logo();
-        render_anim();
     }
     return false;
 }
