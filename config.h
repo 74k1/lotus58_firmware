@@ -20,14 +20,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
-
-/* Select hand configuration */
-
+// Split
 #define MASTER_LEFT
 #define USE_SERIAL
-// #define MASTER_RIGHT
-// #define EE_HANDS
+#define SERIAL_USE_MULTI_TRANSACTION
+#define SPLIT_MODS_ENABLE
+#define SPLIT_TRANSPORT_MIRROR
+#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_WPM_ENABLE
+#define SPLIT_ACTIVITY_ENABLE
 
 #define FORCE_NKRO
 // #define COMBO_COUNT 4
@@ -39,13 +40,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_DISABLE_TIMEOUT
 #define OLED_BRIGHTNESS 128
 #define OLED_FONT_H "keyboards/tweetydabird/lotus58/keymaps/74k1/glcdfont.c"
-
-// Dual Display Mods
-#define SERIAL_USE_MULTI_TRANSACTION
-#define SPLIT_MODS_ENABLE
-#define SPLIT_TRANSPORT_MIRROR
-#define SPLIT_LAYER_STATE_ENABLE
-#define SPLIT_WPM_ENABLE
 
 // RGB
 #define RGB_MATRIX_LED_COUNT 58
