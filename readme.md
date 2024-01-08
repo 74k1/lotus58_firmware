@@ -69,4 +69,4 @@ I ordered main Keyboard Parts from [lectronz](https://lectronz.com/stores/tweety
 | [TweetyDaBird](https://github.com/TweetyDaBird) | For making the keyboard (and helping me out a lot with the firmware in the beginning) |
 | [Tweety's Wild Thinking Discord](https://discord.gg/G6QzcJQUnm) | Also being a great help to me. Especially [RagingCactus](https://github.com/RagingCactus/qmk_firmware/tree/4999b32b5a03b7e1e680d352d90f086fee1a6232/keyboards/lotus58/keymaps/ragingcactus) for the RGB. |
 | [joric](https://github.com/joric/qle) | For the glcdfont editor. Very cool. |
-| [laosteven](https://github.com/laosteven/fluffy-octo-eureka)https://github.com/laosteven/fluffy-octo-eureka | For the readme inspiration. |
+| [laosteven](https://github.com/laosteven/fluffy-octo-eureka) | For the readme inspiration. |
