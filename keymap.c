@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // | ESC   | 1      | 2      | 3      | 4      | 5      |        |       |        | 6      | 7      | 8      | 9      | 0      | <-     |
          KC_ESC,    CH_1,    CH_2,    CH_3,    CH_4,    CH_5, XXXXXXX,         XXXXXXX,    CH_6,    CH_7,    CH_8,    CH_9,    CH_0, KC_BSPC,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | TAB   | Q      | W      | E      | R      | T      |        |       |        | Z      | U      | I      | O      | P      |        |
-         KC_TAB,    CH_Q,    CH_W,    CH_E,    CH_R,    CH_T,                              CH_Z,    CH_U,    CH_I,    CH_O,    CH_P, XXXXXXX,
+    // | TAB   | Q      | W      | E      | R      | T      |        |       |        | Z      | U      | I      | O      | P      | ->     |
+         KC_TAB,    CH_Q,    CH_W,    CH_E,    CH_R,    CH_T,                              CH_Z,    CH_U,    CH_I,    CH_O,    CH_P,  KC_DEL,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
     // | LSFT  | A      | S      | D      | F      | G      |        |       |        | H      | J      | K      | L      | /      | RSFT   |
         KC_LSFT,    CH_A,    CH_S,    CH_D,    CH_F,    CH_G,                              CH_H,    CH_J,    CH_K,    CH_L, CH_SLSH, KC_RSFT,
@@ -56,8 +56,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // | §     | F1     | F2     | F3     | F4     | F5     |        |       |        | F6     | F7     | F8     | F9     | F10    | <-     |
         CH_SECT,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5, XXXXXXX,         XXXXXXX,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10, _______,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | TAB   | F11    | F12    | F13    | F14    | F15    |        |       |        | F16    | F17    | F18    | F19    | F20    |        |
-        _______,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,                            KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20, XXXXXXX,
+    // | TAB   | F11    | F12    | F13    | F14    | F15    |        |       |        | F16    | F17    | F18    | F19    | F20    | ->     |
+        _______,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,                            KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20, _______,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
     // | LSFT  | CAPS   | PrScr  | INS    | UP     |        |        |       |        | LEFT   | DOWN   | UP     | RIGHT  |        | RSFT   |
         _______, KC_CAPS, KC_PSCR,  KC_INS,   KC_UP, XXXXXXX,                           KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, _______,
@@ -74,8 +74,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // | ESC   | 1      | 2      | 3      | 4      | 5      |        |       |        | 6      | 7      | 8      | 9      | 0      | <-     |
          KC_ESC,    CH_1,    CH_2,    CH_3,    CH_4,    CH_5, XXXXXXX,         XXXXXXX,    CH_6,    CH_7,    CH_8,    CH_9,    CH_0, KC_BSPC,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | ~     | ^      | @      | #      | °      | $      |        |       |        | `      | |      | '      | ?      | !      |        |
-        CH_TILD, CH_CIRC,   CH_AT, CH_HASH,  CH_DEG,  CH_DLR,                            CH_GRV, CH_PIPE, CH_QUOT, CH_QUES, CH_EXLM, XXXXXXX,
+    // | ~     | ^      | @      | #      | °      | $      |        |       |        | `      | |      | '      | ?      | !      | ->     |
+        CH_TILD, CH_CIRC,   CH_AT, CH_HASH,  CH_DEG,  CH_DLR,                            CH_GRV, CH_PIPE, CH_QUOT, CH_QUES, CH_EXLM, _______,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
     // | LSFT  | <      | [      | {      | (      | \      |        |       |        | /      | )      | }      | ]      | >      | RSFT   |
         _______, CH_LABK, CH_LBRC, CH_LCBR, CH_LPRN, CH_BSLS,                           CH_SLSH, CH_RPRN, CH_RCBR, CH_RBRC, CH_RABK, _______,
