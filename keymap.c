@@ -31,6 +31,15 @@ combo_t key_combos[] = {
 	COMBO(ue_combo, CH_UDIA)
 };
 
+// Snap Tap
+const key_cancellation_t PROGMEM key_cancellation_list[] = {
+    // on key down
+    //       |    key to be released
+    //       |     |
+    [0] = {KC_D, KC_A},
+    [1] = {KC_A, KC_D},
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT( // NORMAL
@@ -95,8 +104,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // |       |        |        |        |        |        |        |       |        |        |        |        |        |        |        |
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------|        |       |        |--------+--------+--------+--------+--------+--------|
-    // | BOOT  |        |        |        |        |        |        |       |        | HUE +  | SAT +  | BRI +  | EFF +  | TG RGB |        |
-        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                           RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG, XXXXXXX,
+    // | BOOT  |        |        |        | SNPTAP |        |        |       |        | HUE +  | SAT +  | BRI +  | EFF +  | TG RGB |        |
+        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, KX_CATG, XXXXXXX,                           RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
     // |       |        |        |        |        |        |        |       | LAYER4 | HUE -  | SAT -  | BRI -  | EFF -  | MO RGB |        |
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           TG(4), RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD, XXXXXXX,

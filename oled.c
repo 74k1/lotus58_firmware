@@ -54,6 +54,11 @@ void oled_render_led_state(void) {
     //oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("     "), false);
     oled_write_P(led_state.caps_lock ? PSTR("[CAP]") : PSTR("     "), false);
     //oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("     "), false);
+    if (key_cancellation_is_enabled()) {
+        oled_write_P(PSTR("[SNA]"), false);
+    } else {
+        oled_write_P(PSTR("     "), false);
+    }
 }
 
 void oled_render_layer_state_main(void) {
