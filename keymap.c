@@ -12,10 +12,9 @@ const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC
 const key_override_t backslash_key_override = ko_make_basic(MOD_MASK_SHIFT, CH_SLSH, CH_BSLS);
 
 // this globally defines all key overrides to be used
-const key_override_t **key_overrides = (const key_override_t *[]){
+const key_override_t *key_overrides[] = {
     &delete_key_override,
-    &backslash_key_override,
-    NULL
+    &backslash_key_override
 };
 
 // TAIKO COMBOS
