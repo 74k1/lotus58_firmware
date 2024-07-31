@@ -12,7 +12,7 @@
 - [x] add Mac switch
 - [x] RGB (thanks to [RagingCactus](https://github.com/RagingCactus/qmk_firmware/tree/4999b32b5a03b7e1e680d352d90f086fee1a6232/keyboards/lotus58/keymaps/ragingcactus))
 - [ ] 3D Printed Case (currently on it)
-~~- [ ] upgrade components (ordered from [splitkb.com](https://splitkb.com/))~~
+- [ ] ~~upgrade components (ordered from [splitkb.com](https://splitkb.com/))~~
 - [ ] I'm getting an entire new board. because I messed up the soldering myself. Getting it from Tweety directly again :)
 - [ ] take pic
 - [ ] update readme.md
