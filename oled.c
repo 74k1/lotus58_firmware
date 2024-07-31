@@ -73,9 +73,18 @@ void oled_render_layer_state_main(void) {
             oled_write_P(PSTR("[SPE]"), false);
             break;
         case 3:
-            oled_write_P(PSTR("[QMK]"), false);
+            oled_write_P(PSTR("[MAC]"), false);
             break;
         case 4:
+            oled_write_P(PSTR("[MFK]"), false);
+            break;
+        case 5:
+            oled_write_P(PSTR("[MSP]"), false);
+            break;
+        case 6:
+            oled_write_P(PSTR("[QMK]"), false);
+            break;
+        case 7:
             oled_write_P(PSTR("[MOU]"), false);
             break;
         default:
