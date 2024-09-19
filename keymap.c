@@ -18,6 +18,12 @@ const key_override_t *key_overrides[] = {
     &backslash_key_override
 };
 
+// CUSTOM KEYCODES / NORM TO MAC / MAC TO NORM
+enum custom_keycodes {
+    KC_NORM = QK_USER,
+    KC_MAC
+};
+
 // TAIKO COMBOS
 const uint16_t PROGMEM escape_combo[] = {KC_TAB, CH_1, COMBO_END};
 const uint16_t PROGMEM ae_combo[] = {KC_E, KC_A, COMBO_END};
@@ -32,13 +38,13 @@ combo_t key_combos[] = {
 };
 
 // Snap Tap
-const key_cancellation_t PROGMEM key_cancellation_list[] = {
-    // on key down
-    //       |    key to be released
-    //       |     |
-    [0] = {KC_D, KC_A},
-    [1] = {KC_A, KC_D},
-};
+//const key_cancellation_t PROGMEM key_cancellation_list[] = {
+//    // on key down
+//    //       |    key to be released
+//    //       |     |
+//    [0] = {KC_D, KC_A},
+//    [1] = {KC_A, KC_D},
+//};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -162,7 +168,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, KX_CATG, XXXXXXX,                           RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_TOG, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
     // |       |        | MAC    | NORM   |        |        |        |       | LAYER7 | HUE -  | SAT -  | BRI -  | EFF -  | MO RGB |        |
-        XXXXXXX, XXXXXXX,   DF(3),  DF(0), XXXXXXX, XXXXXXX, XXXXXXX,           TG(7), RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD, XXXXXXX,
+        XXXXXXX, XXXXXXX,  KC_MAC, KC_NORM, XXXXXXX, XXXXXXX, XXXXXXX,           TG(7), RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, RGB_MOD, XXXXXXX,
     // |-------+--------+--------+--------+--------+--------+--------|       |--------+--------+--------+--------+--------+--------+--------|
                                //|        |        | LAYER6 |        |       |        | LAYER6 |        |        |
                                    XXXXXXX, XXXXXXX, _______, XXXXXXX,         XXXXXXX, _______, XXXXXXX, XXXXXXX
@@ -187,3 +193,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                //'--------+--------+--------+--------'       '--------+--------+--------+--------'
     )
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case KC_MAC:
+            if (record->event.pressed) {
+                set_single_persistent_default_layer(3);
+            }
+            return false;
+        case KC_NORM:
+            if (record->event.pressed) {
+                set_single_persistent_default_layer(0);
+            }
+            return false;
+    }
+    return true;
+}
